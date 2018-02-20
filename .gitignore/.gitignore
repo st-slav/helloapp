@@ -1,0 +1,12 @@
+public/
+node_modules/
+*.log
+
+# Eclipse Project Files
+.settings/
+.project
+.classpath
+.metadata/
+.externalToolBuilders/
+
+test-output/
