@@ -8,7 +8,6 @@ import {Component} from '@angular/core';
             <child-comp><p>Привет {{ name }}!!!</p></child-comp>`,
   styles: [`h2, p {color: red;}`]
 })
-
 export class AppComponent {
   name: string = 'Вазген';
   age: number = 24;
