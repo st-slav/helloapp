@@ -26,6 +26,10 @@ module.exports = {
                     },
                    'angular2-template-loader'
                ]               
+            }, {
+            	test: /\.css$/,
+	            loader: 'raw-loader',
+	            include: path.resolve(__dirname, 'src/app')
             }
         ]
     },
