@@ -4,6 +4,10 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {ChildComponent} from "./child.component";
 import {ChildSecondComponent} from "./childsecond.component";
+import {ChildThirdComponent} from "./childthird.component";
+import {ChildFourthComponent} from "./childfourth.component";
+import {ChildFifthComponent} from "./childfifth.component";
+import {ChildSixthComponent} from "./childsixth.component";
 
 /*
  * declarations: классы представлений (view classes), которые принадлежат модулю. Angular имеет три типа классов представлений: компоненты (components), директивы (directives), каналы (pipes)
@@ -14,7 +18,7 @@ import {ChildSecondComponent} from "./childsecond.component";
  */
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, ChildComponent, ChildSecondComponent],
+  declarations: [AppComponent, ChildComponent, ChildSecondComponent, ChildThirdComponent, ChildFourthComponent, ChildFifthComponent, ChildSixthComponent],
   bootstrap: [AppComponent],
   exports: [],
   providers: []

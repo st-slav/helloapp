@@ -2,7 +2,9 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'child-comp',
-  template: `<label>Введите имя (поле с двусторонней привязкой):</label>
+  template: `<hr>
+              <p>Компонент наследник</p>
+              <label>Введите имя (поле с двусторонней привязкой):</label>
               <input [(ngModel)]="name" placeholder="name">
               <br><br>
               <label>Введите имя (поле с двусторонней привязкой 2):</label>
@@ -13,11 +15,11 @@ import {Component} from '@angular/core';
               <h1>Добро пожаловать, {{name}}!</h1>
               <p>Количество кликов: {{ count }}</p>
               <button (click)="increase($event)">increment</button>
-              <br><hr><br>
-              <ng-content></ng-content>`,
+              <br><br>
+              <ng-content></ng-content>
+              <hr>`,
   styleUrls: ['./app.component.css']
 })
-
 export class ChildComponent {
   name = 'Гриша';
   count: number = 0;
