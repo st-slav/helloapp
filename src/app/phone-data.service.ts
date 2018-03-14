@@ -5,10 +5,12 @@ import {LogService} from "./log.service";
 @Injectable()
 export class PhoneDataService {
   
+  private companies: string[] = ["Apple", "Huawei", "Xiaomi", "Samsung", "LG", "Motorola", "Alcatel", "HP", "No name"];
+  
   private data: Phone[] = [
-    {name: "Apple iPhone 7", price: 56000},
-    {name: "HP Elite x3", price: 55000},
-    {name: "Alcatel Idol S4", price: 25000}
+    {name: "Apple iPhone 7", price: 56000, company: this.companies[0]},
+    {name: "HP Elite x3", price: 55000, company: this.companies[7]},
+    {name: "Alcatel Idol S4", price: 25000, company: this.companies[6]}
   ];
   
   constructor(private logService: LogService) {
@@ -20,9 +22,14 @@ export class PhoneDataService {
     return this.data;
   }
   
-  addData(name: string, price: number) {
-    this.data.push(new Phone(name, price));
-    this.logService.write("данные добавлены - имя: " + name + "; цена: " + price);
+  addData(name: string, price: number, company: string = this.companies[8]) {
+    var phone = new Phone(name, price, company);
+    this.data.push(phone);
+    this.logService.write("данные добавлены - имя: " + phone.name + "; цена: " + phone.price + "; компания: " + phone.company);
+  }
+  
+  getCompanies(): string[] {
+    return this.companies;
   }
   
   delData(phone: Phone) {
