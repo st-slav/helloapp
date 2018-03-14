@@ -8,6 +8,14 @@ import {ChildThirdComponent} from "./childthird.component";
 import {ChildFourthComponent} from "./childfourth.component";
 import {ChildFifthComponent} from "./childfifth.component";
 import {ChildSixthComponent} from "./childsixth.component";
+import {BoldDirective} from "./bold.directive";
+import {BoldHoverDirective} from "./boldhover.directive";
+import {CursiveHoverDirective} from "./cursivehover.directive";
+import {ChildIfComponent} from "./childif.component";
+import {ChildForComponent} from "./childfor.component";
+import {ChildSwitchComponent} from "./childswitch.component";
+import {WhileDirective} from "./while.directive";
+import {SeventhComponent} from "./seventh.component";
 
 /*
  * declarations: классы представлений (view classes), которые принадлежат модулю. Angular имеет три типа классов представлений: компоненты (components), директивы (directives), каналы (pipes)
@@ -18,7 +26,10 @@ import {ChildSixthComponent} from "./childsixth.component";
  */
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, ChildComponent, ChildSecondComponent, ChildThirdComponent, ChildFourthComponent, ChildFifthComponent, ChildSixthComponent],
+  declarations: [AppComponent, ChildComponent, ChildSecondComponent, ChildThirdComponent, ChildFourthComponent,
+    ChildFifthComponent, ChildSixthComponent, BoldDirective, BoldHoverDirective, CursiveHoverDirective, ChildIfComponent,
+    ChildForComponent, ChildSwitchComponent, WhileDirective, SeventhComponent
+  ],
   bootstrap: [AppComponent],
   exports: [],
   providers: []
